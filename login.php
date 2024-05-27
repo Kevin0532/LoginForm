@@ -6,9 +6,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $mysqli = require __DIR__ . "/database.php";
 
-    $sql = sprintf("SELECT * FROM user
-            WHERE email = '%s' ", 
-            $mysqli->real_escape_string($_POST["email"]));
+    $sql = sprintf(
+        "SELECT * FROM user
+            WHERE email = '%s' ",
+        $mysqli->real_escape_string($_POST["email"])
+    );
 
     $result = $mysqli->query($sql);
 
@@ -39,25 +41,35 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-    <h1>Login</h1>
+    <div class="container">
+        <h1>Login</h1>
 
-    <?php if($is_invalid): ?>
-        <em>Invalid Login</em>
-    <?php  endif; ?>
+        <?php if ($is_invalid) : ?>
+            <em>Invalid Login</em>
+        <?php endif; ?>
 
-    <form method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" 
-               value="<?= htmlspecialchars($_POST["email"] ?? "") ?> ">
+        <form method="post">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+            </div>
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        <button>Login</button>
-        <p>Geen account?<a href="signup.html"> Register hier. </a></p>
-    </form>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div id="button-container">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+
+        <p>Geen account? <a href="signup.html">Register hier.</a></p>
+    </div>
 </body>
+
 </html>

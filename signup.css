@@ -1,0 +1,81 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Zorg ervoor dat het lichaam de volledige hoogte van het venster vult */
+    margin: 0;
+}
+
+.heading-content {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form div {
+    margin-bottom: 10px;
+    width: 100%;
+    /* Zorg ervoor dat elk div 100% van de beschikbare breedte inneemt */
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-left: 10px;
+    width: calc(100% - 20px);
+    /* Zelfde breedte als de inputvelden */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+#button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 15px;
+    color: white;
+    background-color: rgb(5, 145, 239);
+    border: none;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
