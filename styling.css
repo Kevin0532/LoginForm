@@ -1,22 +1,25 @@
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     height: 100vh;
-    /* Zorg ervoor dat het lichaam de volledige hoogte van het venster vult */
+    background-color: #F5F5F7;
 }
 
 .heading-content {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
+}
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
 }
 
 .container {
-    border: 2px solid black;
     border-radius: 10px;
     width: 400px;
-    height: auto;
-    /* Pas de hoogte aan op basis van de inhoud */
+    height: 500px;
     padding: 20px;
     box-sizing: border-box;
     position: absolute;
@@ -24,6 +27,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 form {
     display: flex;
@@ -35,7 +39,6 @@ form {
 form div {
     margin-bottom: 10px;
     width: 100%;
-    /* Zorg ervoor dat elk div 100% van de beschikbare breedte inneemt */
 }
 
 label {
@@ -43,7 +46,6 @@ label {
     display: block;
     margin-left: 10px;
     width: calc(100% - 20px);
-    /* Zelfde breedte als de inputvelden */
 }
 
 input[type="text"],
@@ -51,9 +53,10 @@ input[type="email"],
 input[type="password"] {
     width: calc(100% - 20px);
     padding: 10px;
-    border: 1px solid grey;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
     margin-top: 5px;
-    border-radius: 10px;
+    border-radius: 6px;
     box-sizing: border-box;
     margin-left: 10px;
 }
@@ -64,24 +67,31 @@ input[type="password"] {
     justify-content: center;
 }
 
+#forgetPassword {
+    display: flex;
+    justify-content: start;
+    margin-left: 25px;
+    color: rgb(115, 115, 115);
+}
+
 button {
     font-size: 15px;
     color: white;
-    background-color: rgb(5, 145, 239);
+    background-color: #005FFF;
     border: none;
     padding: 10px 0;
     border-radius: 10px;
     width: calc(100% - 20px);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     box-sizing: border-box;
 }
 
-p {
-    text-align: center;
+button:hover {
+    background-color: #2a77fd;
 }
 
-p a {
-    color: rgb(5, 145, 239);
-    text-decoration: none;
+.registerLabel {
+    display: flex;
+    justify-content: center;
 }
